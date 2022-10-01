@@ -52,7 +52,7 @@ label{
 
 .page-title{
   font-size: 25px;
-  color: rgba(0, 0, 0, 0.833);
+  color: rgba(0, 0, 0, 0.700);
   font-weight: bold;
 }
 .card-title{
@@ -67,6 +67,10 @@ label{
 .card{
   box-shadow: 0 0 2px rgb(189, 188, 188);
   border-radius: 0 !important;
+}
+
+.card-text{
+  cursor: pointer;
 }
 .primary-button{
   background-color: #090C7C !important;

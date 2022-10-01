@@ -9,7 +9,7 @@ function Doctor({ doctor }) {
       onClick={() => navigate(`/book-appointment/${doctor._id}`)}
     >
       <h1 className="card-title">
-        {doctor.firstName} {doctor.lastName}
+        Dr. {doctor.firstName} {doctor.lastName}
       </h1>
       <hr />
       <p>

@@ -86,11 +86,11 @@ function DoctorAppointments() {
       dataIndex: "actions",
       render: (text, record) => (
         <div className="d-flex">
-          {record.status === "pending" && (
+          {record.status === "Pending" && (
             <div className="d-flex">
               <h1
                 className="anchor px-2"
-                onClick={() => changeAppointmentStatus(record, "approved")}
+                onClick={() => changeAppointmentStatus(record, "Approved")}
               >
                 Approve
               </h1>

@@ -94,7 +94,7 @@ function BookAppointment() {
 
       dispatch(hideLoading());
       if (response.data.success) {
-        
+
         toast.success(response.data.message);
         navigate('/appointments')
       }
@@ -112,14 +112,14 @@ function BookAppointment() {
       {doctor && (
         <div>
           <h1 className="page-title">
-            {doctor.firstName} {doctor.lastName}
+          Dr. {doctor.firstName} {doctor.lastName}
           </h1>
           <hr />
           <Row gutter={20} className="mt-5" align="middle">
 
             <Col span={8} sm={24} xs={24} lg={8}>
               <img
-                src="https://thumbs.dreamstime.com/b/finger-press-book-now-button-booking-reservation-icon-online-149789867.jpg"
+                src="https://cdn5.vectorstock.com/i/thumb-large/42/04/blue-book-now-badge-isolated-on-white-vector-30064204.jpg"
                 alt=""
                 width="100%"
                 height='400'
@@ -178,7 +178,7 @@ function BookAppointment() {
                 )}
               </div>
             </Col>
-           
+
           </Row>
         </div>
       )}

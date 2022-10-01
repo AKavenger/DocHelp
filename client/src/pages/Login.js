@@ -44,7 +44,7 @@ function Login() {
             LOGIN
           </Button>
 
-          <Link to="/register" className="anchor mt-2">
+          <Link to="/register" className="anchor mt-5">
             CLICK HERE TO REGISTER
           </Link>
 

@@ -85,7 +85,7 @@ router.post("/get-user-info-by-id", authMiddleware, async (req, res) => {
 
 router.post("/apply-doctor-account", authMiddleware, async (req, res) => {
   try {
-    const newdoctor = new Doctor({ ...req.body, status: "pending" });
+    const newdoctor = new Doctor({ ...req.body, status: "Pending" });
     await newdoctor.save();
     const adminUser = await User.findOne({ isAdmin: true });
 
@@ -164,9 +164,9 @@ router.post("/delete-all-notifications", authMiddleware, async (req, res) => {
   }
 });
 
-router.get("/get-all-approved-doctors", authMiddleware, async (req, res) => {
+router.get("/get-all-Approved-doctors", authMiddleware, async (req, res) => {
   try {
-    const doctors = await Doctor.find({ status: "approved" });
+    const doctors = await Doctor.find({ status: "Approved" });
     res.status(200).send({
       message: "Doctors fetched successfully",
       success: true,
@@ -184,7 +184,7 @@ router.get("/get-all-approved-doctors", authMiddleware, async (req, res) => {
 
 router.post("/book-appointment", authMiddleware, async (req, res) => {
   try {
-    req.body.status = "pending";
+    req.body.status = "Pending";
     req.body.date = moment(req.body.date, "DD-MM-YYYY").toISOString();
     req.body.time = moment(req.body.time, "HH:mm").toISOString();
     const newAppointment = new Appointment(req.body);

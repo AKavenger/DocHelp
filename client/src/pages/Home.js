@@ -11,7 +11,7 @@ function Home() {
   const getData = async () => {
     try {
       dispatch(showLoading())
-      const response = await axios.get("/api/user/get-all-approved-doctors", {
+      const response = await axios.get("/api/user/get-all-Approved-doctors", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -30,6 +30,9 @@ function Home() {
   }, []);
   return (
     <Layout>
+      <h1 className="d-flex page-title justify-content-center">Namaste, Please do not panic and Book your appointment first.</h1>
+      <hr/>
+      {!doctors.length&&<div className="d-flex page-title w-100 h-100 justify-content-center align-items-center"><h3>No Doctors Available</h3></div>}
       <Row gutter={20}>
         {doctors.map((doctor) => (
           <Col span={8} xs={24} sm={24} lg={8}>

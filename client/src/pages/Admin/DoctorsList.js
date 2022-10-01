@@ -80,18 +80,18 @@ function DoctorsList() {
       dataIndex: "actions",
       render: (text, record) => (
         <div className="d-flex">
-          {record.status === "pending" && (
+          {record.status === "Pending" && (
             <h1
               className="anchor"
-              onClick={() => changeDoctorStatus(record, "approved")}
+              onClick={() => changeDoctorStatus(record, "Approved")}
             >
               Approve
             </h1>
           )}
-          {record.status === "approved" && (
+          {record.status === "Approved" && (
             <h1
               className="anchor"
-              onClick={() => changeDoctorStatus(record, "blocked")}
+              onClick={() => changeDoctorStatus(record, "Blocked")}
             >
               Block
             </h1>
