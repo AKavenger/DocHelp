@@ -1,8 +1,20 @@
-const express = require("express");
-const app = express();
 require("dotenv").config();
-const dbConfig = require("./config/dbConfig");
+const express = require("express");
+const mongoose = require('mongoose')
+const app = express();
+//const dbConfig = require("./config/dbConfig");
 app.use(express.json()); //To destructure the email and password
+
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URL);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
 const userRoute = require("./routes/userRoute");
 const adminRoute = require("./routes/adminRoute");
 const doctorRoute = require("./routes/doctorsRoute");
@@ -22,4 +34,6 @@ app.get("*", (req, res) => {
 const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => res.send("Hello World!"));
-app.listen(port, () => console.log(`Node Express Server Started at ${port}!`));
+connectDB().then(() => {
+  app.listen(port, () => console.log(`Node Express Server Started at ${port}!`));
+})
