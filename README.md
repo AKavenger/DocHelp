@@ -9,12 +9,17 @@ appointments, and add professional doctors to the list.
 
 - Patients can book doctor's appointments from list of doctors
 - Live doctor availability check
+
+![Screenshot (60)](https://user-images.githubusercontent.com/63312394/205636730-6bc5e155-4fdf-4797-9a4a-4a00efb5215e.png)
+
 - Notifications send to doctor for new appointments
 - Notification send to patient regarding status of their appointments
-- Any user can apply for doctor's profile and verified by admin
+- Any user can apply for doctor's profile and verified by admin.
+
+![Screenshot (108)](https://user-images.githubusercontent.com/63312394/205636756-6fc6663b-9c53-4105-9c3c-09c10aeb9f00.png)
+
 - Admin has access to doctor and users list
 - Admin can approve and block doctor anytime.
-
 
 ## Tech Stack
 
@@ -22,6 +27,7 @@ appointments, and add professional doctors to the list.
 
 **Server:** Node, Express, MongoDB, Bcrypt and JWT Tokens
 
+![Screenshot (28)](https://user-images.githubusercontent.com/63312394/205636087-5b4ca8eb-1c11-4b43-8f65-9e0984a66100.png)
 
 ## Installation
 
