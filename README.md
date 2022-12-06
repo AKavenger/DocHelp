@@ -78,7 +78,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Demo
 
-- 👉 Railways : [https://dochelp-production.up.railway.app/](https://mern-amazona-app.herokuapp.com)
+- 👉 Railways : [https://dochelp-production.up.railway.app/](https://dochelp-production.up.railway.app/)
 
 
 ## Support
